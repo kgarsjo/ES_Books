@@ -1,0 +1,13 @@
+\select@language {english}
+\contentsline {chapter}{Contents}{v}
+\contentsline {section}{Chapter \par \penalty \@M \vskip \afterchapskip }{3}
+\contentsline {chapter}{2920, Last Year of the First Era}{3}
+\contentsline {part}{Biographies and History}{3}
+\contentsline {part}{Research and Scholarly Works}{7}
+\contentsline {part}{Guides and Instruction}{9}
+\contentsline {part}{Songs, Poems and Plays}{11}
+\contentsline {part}{Journals, Notes and Correspondence}{13}
+\contentsline {part}{Fiction}{15}
+\contentsline {part}{Religion, Myths, Legends and Metaphysics}{17}
+\contentsline {part}{Provincial Information and Records}{21}
+\contentsline {part}{Pamphlets and Propaganda}{23}

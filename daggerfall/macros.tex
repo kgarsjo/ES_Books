@@ -1,0 +1,40 @@
+% Section line - Sets a fancy horizontal rule for rigid prose breaks
+\newcommand{\sectionline}[1][black]{%
+	\nointerlineskip \vspace{.3\baselineskip}\hspace{\fill}
+	{\resizebox{0.85\linewidth}{0.3ex}
+ 		{\pgfornament[color = #1]{89}
+    }}%
+	\hspace{\fill}
+	\par\nointerlineskip \vspace{.5\baselineskip}
+}
+
+% Blank Page
+
+% Chapter Heading with title and author
+\newcommand{\cchapter}[2]{%
+	\chapter*{\headerfont #1\newline\small By #2}%
+	\addcontentsline{toc}{chapter}{#1}}
+
+% Section Heading
+\newcommand{\csection}[2][Chapter]{%
+	\section*{\headerfont #1 #2}%
+	\addcontentsline{toc}{section}{#1 #2}}
+
+% Part Heading
+\newcommand{\cpart}[1]{%
+	\part*{\headerfont #1}%
+	\addcontentsline{toc}{part}{#1}}
+
+% Para Break - Sets a blank line for soft prose breaks between paragraphs (preserves indentation)
+\newcommand{\parabreak}[0]{\sectionline[white]}
+
+% Drop Cap - Uniform method of accenting a paragraph's beginning
+\newcommand{\dropcap}[3][6]{\lettrine[lines=#1]{{\blockfont\color{red}#2}}{#3}}
+
+% Quote
+\newcommand{\cquote}[3]{%
+	\begin{quotation}
+	\small#1
+	\sourceatright{\small---#2}
+	\end{quotation}
+}

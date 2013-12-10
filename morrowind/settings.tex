@@ -1,0 +1,29 @@
+% Included Packages
+\usepackage[object=vectorian]{pgfornament}
+\usepackage[autostyle,english=american]{csquotes}
+\usepackage[english]{babel}
+\usepackage{lettrine}
+\usepackage{ifxetex}
+\usepackage{fontspec}
+
+% Package Settings
+\defaultfontfeatures{Ligatures=TeX}
+\MakeOuterQuote{"}
+\newfontfamily\blockfont{GoudyInitialen}
+\newfontfamily\headerfont{MagicCardsNormal}
+\setlength{\parskip}{1pt}
+\maxdeadcycles=1000
+
+% Page Settings
+\setlength{\trimtop}{\stockheight}
+\addtolength{\trimtop}{-\paperheight}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+
+
+% Defined Constants
+\newcommand{\csetting}{Morrowind}
+\newcommand{\ctitle}{Collected Writings of \csetting}
+\newcommand{\ccollector}{Hasphat Antabolis}
+\newcommand{\cauthor}{Catalogued by the Imperial Geographic Society, with assistance from \ccolector}
+\newcommand{\cpublished}{3E 429}
