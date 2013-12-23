@@ -10,7 +10,7 @@
 
 % newchapter - Starts a new chapter with the given content
 \newcommand{\newchapter}[2]{
-	\chapter*{\headerfont #1\newline\small By #2}
+	\chapter{\headerfont #1\newline\small By #2}
 }
 
 % dropcap - Formats the first given word as a drop-cap
@@ -31,12 +31,12 @@
 % Section Heading
 \newcommand{\csection}[2][Chapter]{%
 	\section*{\headerfont #1 #2}%
-	\addcontentsline{toc}{section}{#1 #2}}
+}
 
 % Part Heading
 \newcommand{\cpart}[1]{%
-	\part*{\headerfont #1}%
-	\addcontentsline{toc}{part}{#1}}
+	\part{\headerfont #1}%
+}
 
 \newcommand{\cnote}[1]{
 	\subsection*{\small\textit{#1}}
