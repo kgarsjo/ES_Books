@@ -8,12 +8,25 @@
 	\par\nointerlineskip \vspace{.5\baselineskip}
 }
 
-% Blank Page
+% newchapter - Starts a new chapter with the given content
+\newcommand{\newchapter}[2]{
+	\chapter*{\headerfont #1\newline\small By #2}
+}
 
-% Chapter Heading with title and author
-\newcommand{\cchapter}[2]{%
-	\chapter*{\headerfont #1\newline\small By #2}%
-	\addcontentsline{toc}{chapter}{#1}}
+% dropcap - Formats the first given word as a drop-cap
+\newcommand{\dropcap}[2][6]{
+	\lettrine[lines=#1]{\blockfont\color{red}\strcar{#2}}{\strcdr{#2}}
+}
+
+% strcar - Splits the string to return the first character
+\newcommand{\strcar}[1]{
+	\StrLeft{#1}{1}
+}
+
+% strcdr - Splits the string to return the characters following the first
+\newcommand{\strcdr}[1]{
+	\StrGobbleLeft{#1}{1}
+}
 
 % Section Heading
 \newcommand{\csection}[2][Chapter]{%
@@ -25,13 +38,12 @@
 	\part*{\headerfont #1}%
 	\addcontentsline{toc}{part}{#1}}
 
-\newcommand{\cnote}[1]{\small\textit{#1}\newline}
+\newcommand{\cnote}[1]{
+	\subsection*{\small\textit{#1}}
+}
 
 % Para Break - Sets a blank line for soft prose breaks between paragraphs (preserves indentation)
 \newcommand{\parabreak}[0]{\sectionline[white]}
-
-% Drop Cap - Uniform method of accenting a paragraph's beginning
-\newcommand{\dropcap}[3][6]{\lettrine[lines=#1]{{\blockfont\color{red}#2}}{#3}}
 
 % Quote
 \newcommand{\cquote}[3]{%
