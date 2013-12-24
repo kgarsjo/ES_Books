@@ -16,7 +16,7 @@
 
 % Full Title Page (Recto)
 \date{\cpublished}
-\author{Test Author}
+\author{\cauthor}
 \maketitle
 \clearpage
 
@@ -29,4 +29,11 @@ Dedication goes here (properly formatted)
 \cleardoublepage
 
 % Table of Contents (Recto)
+\makeatletter
+\setlength{\cftbeforepartskip}{1.0em}
+\setlength{\cftbeforechapterskip}{0.2em}
+\setlength{\cftchapterindent}{1.5em}
+\renewcommand{\cftchapterfont}{\mdseries}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}
+\makeatother
 \tableofcontents*

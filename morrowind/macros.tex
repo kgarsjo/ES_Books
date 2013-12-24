@@ -10,12 +10,13 @@
 
 % newchapter - Starts a new chapter with the given content
 \newcommand{\newchapter}[2]{
-	\chapter{\headerfont #1\newline\small By #2}
+	\chapter{#1}
+	\vspace*{-4em}{\headerfont\small #2}
 }
 
-% dropcap - Formats the first given word as a drop-cap
+% dropcap - Formats the first given -- word as a drop-cap
 \newcommand{\dropcap}[2][6]{
-	\lettrine[lines=#1]{\blockfont\color{red}\strcar{#2}}{\strcdr{#2}}
+	\lettrine[lines=#1,lraise=-0.05,findent=-4pt,loversize=-0.1]{\blockfont\color{red}\strcar{#2}}{\strcdr{#2}}
 }
 
 % strcar - Splits the string to return the first character
@@ -35,7 +36,7 @@
 
 % Part Heading
 \newcommand{\cpart}[1]{%
-	\part{\headerfont #1}%
+	\part{#1}%
 }
 
 \newcommand{\cnote}[1]{

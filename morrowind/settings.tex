@@ -7,6 +7,7 @@
 \usepackage{fontspec}
 \usepackage{xstring}
 \usepackage{verbatim}
+\usepackage{titlesec}
 
 % Package Settings
 \defaultfontfeatures{Ligatures=TeX}
@@ -19,15 +20,17 @@
 \maxsecnumdepth{none}
 
 % Page Settings
-\setlength{\trimtop}{\stockheight}
-\addtolength{\trimtop}{-\paperheight}
-\setlength{\trimedge}{\stockwidth}
-\addtolength{\trimedge}{-\paperwidth}
+\setlrmarginsandblock{1in}{0.5in}{*}
+\setulmarginsandblock{0.75in}{2in}{*}
+\checkandfixthelayout
 
+% Section Settings
+\titleformat{\chapter}{\headerfont\Huge\bfseries}{\thechapter}{1em}{}
+\titleformat{\subsection}{\small\mdseries}{\thesection}{}{}
 
 % Defined Constants
 \newcommand{\csetting}{Morrowind}
 \newcommand{\ctitle}{Collected Writings of \csetting}
 \newcommand{\ccollector}{Hasphat Antabolis}
-\newcommand{\cauthor}{Catalogued by the Imperial Geographic Society, with assistance from \ccolector}
+\newcommand{\cauthor}{Catalogued by the Imperial Geographic Society,\\with assistance from \ccollector}
 \newcommand{\cpublished}{3E 429}
