@@ -11,7 +11,7 @@
 % newchapter - Starts a new chapter with the given content
 \newcommand{\newchapter}[2]{
 	\chapter{#1}
-	\vspace*{-4em}{\headerfont\small #2}
+	\chapterprecis{\headerfont\small #2}
 }
 
 % dropcap - Formats the first given -- word as a drop-cap
@@ -29,8 +29,12 @@
 	\StrGobbleLeft{#1}{1}
 }
 
-% Section Heading
 \newcommand{\csection}[2][Chapter]{%
+	\section{#1 #2}%
+}
+
+% Section Heading w/ no TOC entry
+\newcommand{\csectiontoc}[2][Chapter]{%
 	\section*{\headerfont #1 #2}%
 }
 
@@ -39,8 +43,9 @@
 	\part{#1}%
 }
 
+% Subsection heading
 \newcommand{\cnote}[1]{
-	\subsection*{\small\textit{#1}}
+	\small\textit{\\\\#1}\par
 }
 
 % Para Break - Sets a blank line for soft prose breaks between paragraphs (preserves indentation)

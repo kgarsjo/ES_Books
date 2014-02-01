@@ -23,10 +23,16 @@
 \setlrmarginsandblock{1in}{0.5in}{*}
 \setulmarginsandblock{0.75in}{2in}{*}
 \checkandfixthelayout
+\nouppercaseheads
 
 % Section Settings
-\titleformat{\chapter}{\headerfont\Huge\bfseries}{\thechapter}{1em}{}
-\titleformat{\subsection}{\small\mdseries}{\thesection}{}{}
+\titleformat{\chapter}{\headerfont\Huge\bfseries}{}{}{}
+\titlespacing{\chapter}{0em}{6em}{2.5em}
+\titleformat{\section}{\headerfont\huge\bfseries}{}{}{}
+\titleformat{\subsection}{\small\mdseries}{}{}{}
+
+% Header Settings
+\makeoddhead{headings}{}{}{\thepage}
 
 % Defined Constants
 \newcommand{\csetting}{Morrowind}
