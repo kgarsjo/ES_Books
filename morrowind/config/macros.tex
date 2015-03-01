@@ -1,0 +1,72 @@
+% ImportClearPage - Provides '\include'-like page clearing using the import package
+% TODO remove if not used, possibly not necessary since we can subimport *matter and have content in-folder
+\newcommand{\importClearPage}[2]{
+	\clearpage
+	\subimport{#1}{#2}
+}
+
+
+% Section line - Sets a fancy horizontal rule for rigid prose breaks
+\newcommand{\sectionline}[1][black]{%
+	\nointerlineskip \vspace{.3\baselineskip}\hspace{\fill}
+	{\resizebox{0.85\linewidth}{0.3ex}
+ 		{\pgfornament[color = #1]{89}
+    }}%
+	\hspace{\fill}
+	\par\nointerlineskip \vspace{.5\baselineskip}
+}
+
+% newchapter - Starts a new chapter with the given content
+\newcommand{\newchapter}[2]{
+	\chapter{#1}
+	\chapterprecis{\headerfont\small #2}
+}
+
+% dropcap - Formats the first given -- word as a drop-cap
+\newcommand{\dropcap}[2][6]{
+	\ifxetex
+		\lettrine[lines=#1,lraise=-0.05,findent=-4pt,loversize=-0.1]{\blockfont\color{red}\strcar{#2}}{\strcdr{#2}}
+	\else
+		#2
+	\fi
+}
+
+% strcar - Splits the string to return the first character
+\newcommand{\strcar}[1]{
+	\StrLeft{#1}{1}
+}
+
+% strcdr - Splits the string to return the characters following the first
+\newcommand{\strcdr}[1]{
+	\StrGobbleLeft{#1}{1}
+}
+
+\newcommand{\csection}[2][Chapter]{%
+	\section{#1 #2}%
+}
+
+% Section Heading w/ no TOC entry
+\newcommand{\csectiontoc}[2][Chapter]{%
+	\section*{\headerfont #1 #2}%
+}
+
+% Part Heading
+\newcommand{\cpart}[1]{%
+	\part{#1}%
+}
+
+% Subsection heading
+\newcommand{\cnote}[1]{
+	\small\textit{\\\\#1}\par
+}
+
+% Para Break - Sets a blank line for soft prose breaks between paragraphs (preserves indentation)
+\newcommand{\parabreak}[0]{\sectionline[white]}
+
+% Quote
+\newcommand{\cquote}[3]{%
+	\begin{quotation}
+	\small#1
+	\sourceatright{\small---#2}
+	\end{quotation}
+}

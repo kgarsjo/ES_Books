@@ -1,0 +1,43 @@
+% Front Matter
+% TODO: Half-Title Page (Recto)
+% TODO: Full Title Page (Recto)
+% TODO: Copyright Page (Verso) (Have fun w/ this one in Imperial Geog. Society Style)
+% TODO: Dedication Page
+% NOTE: Start folio display here
+% TODO: Table of Contents (Recto)
+
+\frontmatter
+
+% Half-Title Page (Recto)
+\title{\headerfont\ctitle}
+\author{}
+\date{}
+\maketitle
+\cleardoublepage
+
+% Full Title Page (Recto)
+\date{\cpublished}
+\author{\cauthor}
+\maketitle
+\clearpage
+
+% Copyright Page (Verso)
+Published on the authority of the Imperial Geographic Society
+% TODO try to scan or use IGS logo
+\clearpage
+
+% Dedication Page (Recto)
+Dedication goes here (properly formatted)
+\cleardoublepage
+
+% Table of Contents (Recto)
+\makeatletter
+\setlength{\cftbeforepartskip}{1.0em}
+\setlength{\cftbeforechapterskip}{0.2em}
+\setlength{\cftbeforesectionskip}{0.2em}
+\setlength{\cftchapterindent}{1.5em}
+\setlength{\cftsectionindent}{2.5em}
+\renewcommand{\cftchapterfont}{\mdseries}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}
+\makeatother
+\tableofcontents*

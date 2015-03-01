@@ -2,12 +2,13 @@
 % Morrowind's in-game books
 
 % PREAMBLE
-\documentclass[statementpaper, 8pt, openright]{memoir}
-\input{settings}
-\input{macros}
+% XXX Removed '8pt' from the parameters, recveived 'unused' warning with it there
+\documentclass[statementpaper, openright]{memoir}
+\input{./config/settings}
+\input{./config/macros}
 
 % BODY
 \begin{document}
-\input{frontmatter}
-\input{mainmatter}
+	\subimport{text/}{frontmatter}
+	\subimport{text/}{mainmatter}
 \end{document}

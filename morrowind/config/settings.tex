@@ -1,0 +1,52 @@
+% ifxetex Package is used to determine behavior across the document
+\usepackage{ifxetex}
+
+%\usepackage[object=vectorian]{pgfornament}
+\usepackage[english]{babel}
+\usepackage[autostyle,english=american]{csquotes}
+\usepackage{import}
+\usepackage{lettrine}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{xstring}
+
+% Package Settings
+\MakeOuterQuote{"}
+\setlength{\parskip}{1pt}
+\maxdeadcycles=1000
+\setsecnumdepth{none}
+\maxsecnumdepth{none}
+
+% fontspec Package Settings (Requires xelatex)
+\ifxetex
+	\usepackage{fontspec}
+	\newfontfamily\headerfont{MagicCardsNormal}
+	\newfontfamily\blockfont{GoudyInitialen}
+	\defaultfontfeatures{Ligatures=TeX}
+\else
+	% Define pass-through (identity) functions otherwise
+	\newcommand{\headerfont}[1]{#1}
+	\newcommand{\blockfont}[1]{#1}
+\fi
+
+% Page Settings
+\setlrmarginsandblock{1in}{0.5in}{*}
+\setulmarginsandblock{0.75in}{2in}{*}
+\checkandfixthelayout
+\nouppercaseheads
+
+% Section Settings
+\titleformat{\chapter}{\headerfont\Huge\bfseries}{}{}{}
+\titlespacing{\chapter}{0em}{6em}{2.5em}
+\titleformat{\section}{\headerfont\huge\bfseries}{}{}{}
+\titleformat{\subsection}{\small\mdseries}{}{}{}
+
+% Header Settings
+\makeoddhead{headings}{}{}{\thepage}
+
+% Defined Constants
+\newcommand{\csetting}{Morrowind}
+\newcommand{\ctitle}{Collected Writings of \csetting}
+\newcommand{\ccollector}{Hasphat Antabolis}
+\newcommand{\cauthor}{Catalogued by the Imperial Geographic Society,\\with assistance from \ccollector}
+\newcommand{\cpublished}{3E 429}
